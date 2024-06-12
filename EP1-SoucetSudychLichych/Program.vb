@@ -6,6 +6,8 @@ Module Module1
         Dim pocetCisel As Integer = Convert.ToInt32(Console.ReadLine())
         Dim soucetSudych As Integer = 0
         Dim soucetLichych As Integer = 0
+        Dim pocetSudych As Integer = 0
+        Dim pocetLichych As Integer = 0
         For i As Integer = 0 To pocetCisel - 1
             Dim cislo As Integer
             Do
@@ -14,8 +16,10 @@ Module Module1
                 If cislo >= 0 Then
                     If cislo Mod 2 = 0 Then
                         soucetSudych += cislo
+                        pocetSudych += 1
                     Else
                         soucetLichych += cislo
+                        pocetLichych += 1
                     End If
                     Exit Do
                 Else
@@ -24,7 +28,9 @@ Module Module1
             Loop
         Next
         Console.WriteLine("Souèet sudých èísel: " & soucetSudych)
+        Console.WriteLine("Poèet sudých èísel: " & pocetSudych)
         Console.WriteLine("Souèet lichých èísel: " & soucetLichych)
+        Console.WriteLine("Poèet lichých èísel: " & pocetLichych)
         Console.WriteLine("Stisknìte jakoukoli klávesu pro ukonèení programu.")
         Console.ReadKey()
     End Sub
